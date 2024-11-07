@@ -1,10 +1,6 @@
 #include <stdio.h>
 #define MAX 5
-
-int queue[MAX];
-int front = -1, rear = -1;
-
-// Function to insert an element into the circular queue
+int queue[MAX], front = -1, rear = -1;
 void insert(int value)
 {
     if ((rear + 1) % MAX == front)
@@ -20,8 +16,6 @@ void insert(int value)
     queue[rear] = value;
     printf("Inserted %d\n", value);
 }
-
-// Function to delete an element from the circular queue
 void deleteElement()
 {
     if (front == -1)
@@ -39,8 +33,6 @@ void deleteElement()
         front = (front + 1) % MAX;
     }
 }
-
-// Function to display the elements of the circular queue
 void display()
 {
     if (front == -1)
@@ -61,11 +53,9 @@ void display()
     }
     printf("\n");
 }
-
 int main()
 {
     int choice, value;
-
     while (1)
     {
         printf("\nCircular Queue Operations:\n");
@@ -75,7 +65,6 @@ int main()
         printf("4. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
-
         switch (choice)
         {
         case 1:

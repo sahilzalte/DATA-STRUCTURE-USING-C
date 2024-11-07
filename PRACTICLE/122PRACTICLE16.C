@@ -1,12 +1,42 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 5
-
 int top = -1, stack[MAX];
-void push();
-void pop();
-void display();
-
+void push()
+{
+    int val;
+    if (top == MAX - 1)
+        printf("\nStack is Full!!");
+    else
+    {
+        printf("\nEnter element to push: ");
+        scanf("%d", &val);
+        top++;
+        stack[top] = val;
+    }
+}
+void pop()
+{
+    if (top == -1)
+        printf("\nStack is empty!!");
+    else
+    {
+        printf("\nDeleted Element is: %d", stack[top]);
+        top--;
+    }
+}
+void display()
+{
+    int i;
+    if (top == -1)
+        printf("\nStack is Empty!!");
+    else
+    {
+        printf("\n**** Elements in Stack ****\n");
+        for (i = top; i >= 0; i--)
+            printf("%d\n", stack[i]);
+    }
+}
 int main()
 {
     int ch;
@@ -35,42 +65,4 @@ int main()
         }
     }
     return 0;
-}
-
-void push()
-{
-    int val;
-    if (top == MAX - 1)
-        printf("\nStack is Full!!");
-    else
-    {
-        printf("\nEnter element to push: ");
-        scanf("%d", &val);
-        top++;
-        stack[top] = val;
-    }
-}
-
-void pop()
-{
-    if (top == -1)
-        printf("\nStack is empty!!");
-    else
-    {
-        printf("\nDeleted Element is: %d", stack[top]);
-        top--;
-    }
-}
-
-void display()
-{
-    int i;
-    if (top == -1)
-        printf("\nStack is Empty!!");
-    else
-    {
-        printf("\n**** Elements in Stack ****\n");
-        for (i = top; i >= 0; i--)
-            printf("%d\n", stack[i]);
-    }
 }

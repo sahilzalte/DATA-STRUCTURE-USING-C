@@ -1,15 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-// Define the structure of a node
 struct Node
 {
     int data;
     struct Node *left;
     struct Node *right;
 };
-
-// Function to create a new node
 struct Node *createNode(int value)
 {
     struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
@@ -17,8 +13,6 @@ struct Node *createNode(int value)
     newNode->left = newNode->right = NULL;
     return newNode;
 }
-
-// Function to insert a new node in the BST
 struct Node *insert(struct Node *root, int value)
 {
     if (root == NULL)
@@ -35,8 +29,6 @@ struct Node *insert(struct Node *root, int value)
     }
     return root;
 }
-
-// Function to perform in-order traversal of the BST
 void inorderTraversal(struct Node *root)
 {
     if (root != NULL)
@@ -46,12 +38,10 @@ void inorderTraversal(struct Node *root)
         inorderTraversal(root->right); // Traverse right subtree
     }
 }
-
 int main()
 {
     struct Node *root = NULL;
     int choice, value;
-
     while (1)
     {
         printf("\nBinary Search Tree Operations:\n");
@@ -60,7 +50,6 @@ int main()
         printf("3. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
-
         switch (choice)
         {
         case 1:
