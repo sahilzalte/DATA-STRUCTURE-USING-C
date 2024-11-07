@@ -4,7 +4,8 @@
 #define MAX 10
 #define LENGTH 100
 
-int  main() {
+int main()
+{
     char a[MAX][LENGTH];
     char key[LENGTH];
     int n, i, flag = 0;
@@ -16,8 +17,9 @@ int  main() {
 
     // Prompt user to enter array elements (strings)
     printf("\nEnter array elements (strings): \n");
-    for (i = 0; i < n; i++) {
-        fgets(a[i], LENGTH, stdin); // Read a string
+    for (i = 0; i < n; i++)
+    {
+        fgets(a[i], LENGTH, stdin);    // Read a string
         a[i][strcspn(a[i], "\n")] = 0; // Remove the trailing newline character
     }
 
@@ -27,17 +29,22 @@ int  main() {
     key[strcspn(key, "\n")] = 0; // Remove the trailing newline character
 
     // Perform linear search for the key string
-    for (i = 0; i < n; i++) {
-        if (strcmp(key, a[i]) == 0) { // Compare key with each array element
+    for (i = 0; i < n; i++)
+    {
+        if (strcmp(key, a[i]) == 0)
+        { // Compare key with each array element
             flag = 1;
             break;
         }
     }
 
     // Print the result of the search
-    if (flag == 1) {
+    if (flag == 1)
+    {
         printf("\nElement is found at index %d\n", i);
-    } else {
+    }
+    else
+    {
         printf("\nElement is not found\n");
     }
     return 0;

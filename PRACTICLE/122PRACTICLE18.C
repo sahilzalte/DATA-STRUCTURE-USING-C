@@ -1,13 +1,15 @@
 #include <stdio.h>
 
 // Recursive function to multiply two numbers
-int multiply(int a, int b) {
-    if (a == 0)  // Base case: if 'a' is 0, return 0
+int multiply(int a, int b)
+{
+    if (a == 0) // Base case: if 'a' is 0, return 0
         return 0;
-    return b + multiply(a - 1, b);  // Recursively add 'b' 'a' times
+    return b + multiply(a - 1, b); // Recursively add 'b' 'a' times
 }
 
-int main() {
+int main()
+{
     int a, b;
 
     // Input two numbers

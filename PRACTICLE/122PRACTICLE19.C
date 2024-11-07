@@ -1,22 +1,25 @@
 #include <stdio.h>
 
 // Function to print string in reverse using recursion
-void reverseString(char *str) {
-    if (*str == '\0') {
+void reverseString(char *str)
+{
+    if (*str == '\0')
+    {
         return;
     }
     reverseString(str + 1);
     printf("%c", *str);
 }
 
-int main() {
+int main()
+{
     char str[100];
 
     printf("Enter a string: ");
-    gets(str);  // Use gets() to input string
+    gets(str); // Use gets() to input string
 
     printf("Reversed string: ");
-    reverseString(str);  // Call the recursive function
+    reverseString(str); // Call the recursive function
     printf("\n");
 
     return 0;
