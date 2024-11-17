@@ -2,6 +2,7 @@
     "files.associations": {
         "DOUBLY_LINKED.C": "cpp",
         "FOBONOCCI_SERIES.C": "cpp",
-        "RECUSION_MULTI.C": "cpp"
+        "RECUSION_MULTI.C": "cpp",
+        "LINEARQUEUE.C": "cpp"
     }
 }
