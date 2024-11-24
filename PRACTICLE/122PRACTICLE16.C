@@ -6,7 +6,10 @@ void push()
 {
     int val;
     if (top == MAX - 1)
+    {
+
         printf("\nStack is Full!!");
+    }
     else
     {
         printf("\nEnter element to push: ");
