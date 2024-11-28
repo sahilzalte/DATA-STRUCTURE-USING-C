@@ -1,70 +1,81 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX 5
-int top = -1, stack[MAX];
-void push()
+#define max 5
+int top = -1, stack[max];
+
+void PUSH()
 {
     int val;
-    if (top == MAX - 1)
+    if (top == max - 1)
     {
-
-        printf("\nStack is Full!!");
+        printf("\nStack Overflow !\n");
     }
     else
     {
-        printf("\nEnter element to push: ");
+        printf("\nEnter elemet to insert :");
         scanf("%d", &val);
         top++;
         stack[top] = val;
     }
 }
-void pop()
+
+void POP()
 {
     if (top == -1)
-        printf("\nStack is empty!!");
+    {
+        printf("\nStack is Underflow !\n");
+    }
     else
     {
-        printf("\nDeleted Element is: %d", stack[top]);
+        printf("\nDeleted item is :%d\n", stack[top]);
         top--;
     }
 }
-void display()
+
+void DISPLAY()
 {
     int i;
     if (top == -1)
-        printf("\nStack is Empty!!");
+    {
+        printf("\nStack is Empty\n");
+    }
     else
     {
-        printf("\n**** Elements in Stack ****\n");
         for (i = top; i >= 0; i--)
+        {
             printf("%d\n", stack[i]);
+        }
     }
 }
 int main()
 {
     int ch;
     setbuf(stdout, NULL);
-    printf("\n *** Stack Menu ***");
-    printf("\n1. PUSH\n2. POP\n3. DISPLAY\n4. EXIT\n");
+    printf("\n*** Stack Menu ***\n");
+    printf("\n1.PUSH \n2.POP \n3.DISPLAY \n4.EXIT\n");
     while (1)
     {
-        printf("\nEnter your choice (1-4): ");
+        printf("Enter user Choise:");
         scanf("%d", &ch);
         switch (ch)
         {
         case 1:
-            push();
+            PUSH();
             break;
         case 2:
-            pop();
+            POP();
             break;
         case 3:
-            display();
+            DISPLAY();
             break;
         case 4:
+            printf("Exit From Program ....");
             exit(0);
+            break;
+
         default:
-            printf("\nWrong Choice !!");
+            printf("\nWrong Choise !\n");
+            break;
         }
     }
     return 0;
