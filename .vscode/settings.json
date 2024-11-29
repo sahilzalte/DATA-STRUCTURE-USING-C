@@ -3,6 +3,14 @@
         "DOUBLY_LINKED.C": "cpp",
         "FOBONOCCI_SERIES.C": "cpp",
         "RECUSION_MULTI.C": "cpp",
-        "LINEARQUEUE.C": "cpp"
+        "LINEARQUEUE.C": "cpp",
+        "01_IMP.C": "cpp",
+        "02_IMP.C": "cpp",
+        "03_IMP.C": "cpp",
+        "04_IMP.C": "cpp",
+        "05_IMP.C": "cpp",
+        "06_IMP.C": "cpp",
+        "07_IMP.C": "cpp",
+        "08_IMP.C": "cpp"
     }
 }
